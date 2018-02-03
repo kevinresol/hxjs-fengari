@@ -1,0 +1,16 @@
+{
+  "name": "hxjs-fengari",
+  "license": "MIT",
+  "tags": [
+    "web",
+    "vm",
+    "lua"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "kevinresol"
+  ],
+  "releasenote": "initial release",
+  "version": "0.0.0",
+  "dependencies": {}
+}
