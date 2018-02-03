@@ -21,4 +21,6 @@ extern class Lualib {
     static var luaopen_debug:Dynamic;
     static var luaopen_package:Dynamic;
     
+    static function luaL_openlibs(l:State):Void;
+    
 }

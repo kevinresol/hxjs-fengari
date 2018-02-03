@@ -8,5 +8,5 @@ abstract LuaString(Dynamic) {
 		return new LuaString(Fengari.to_luastring(v));
 	@:to
 	public function toJsString():String
-		return Fengari.to_jsstring(this);
+		return this == null ? null : Fengari.to_jsstring(this);
 }
