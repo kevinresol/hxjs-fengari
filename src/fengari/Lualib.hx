@@ -9,6 +9,7 @@ import haxe.Constraints;
 #end
 extern class Lualib {
     
+    static var luaopen_base:Dynamic;
     static var luaopen_coroutine:Dynamic;
     static var luaopen_table:Dynamic;
     static var luaopen_io:Dynamic;
