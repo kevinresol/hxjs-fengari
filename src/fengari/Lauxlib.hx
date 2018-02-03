@@ -11,5 +11,5 @@ extern class Lauxlib {
     static function luaL_newstate():State;
     static function luaL_requiref(l:State, name:LuaString, openf:Function, global:Bool):Int;
     static function luaL_dostring(l:State, s:LuaString):Int;
-    
+    static function luaL_ref(l:State, i:Int):Int;
 }

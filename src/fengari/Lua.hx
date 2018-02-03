@@ -13,6 +13,9 @@ extern class Lua {
 	
 	@:native('LUA_OK')
 	static var OK:Int;
+	@:native('LUA_REGISTRYINDEX')
+	static var REGISTRYINDEX:Int;
+
 	
 	@:native('LUA_TNIL')
 	static var TNIL:Int;
@@ -44,6 +47,9 @@ extern class Lua {
 	static function lua_pop(l:State, i:Int):Void;
 	static function lua_upvalueindex(i:Int):Int;
 	
+	static function lua_rawgeti(l:State, i:Int, n:Int):Int;
+
+	
 	
 	static function lua_getglobal(l:State, name:LuaString):Void;
 	static function lua_setglobal(l:State, name:LuaString):Void;
@@ -66,4 +72,6 @@ extern class Lua {
 	static function lua_tonumber(l:State, i:Int):Float;
 	static function lua_toboolean(l:State, i:Int):Bool;
 	static function lua_tostring(l:State, i:Int):LuaString;
+	static function lua_tocfunction(l:State, i:Int):Function;
+
 }
