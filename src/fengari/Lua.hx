@@ -46,6 +46,7 @@ extern class Lua {
 	static function lua_next(l:State, i:Int):Int;
 	static function lua_pop(l:State, i:Int):Void;
 	static function lua_upvalueindex(i:Int):Int;
+	static function lua_xmove(from:State, to:State, n:Int):Void;
 	
 	static function lua_rawgeti(l:State, i:Int, n:Int):Int;
 
@@ -61,6 +62,7 @@ extern class Lua {
 	static function lua_pushnumber(l:State, v:Float):Void;
 	static function lua_pushboolean(l:State, v:Bool):Void;
 	static function lua_pushstring(l:State, v:LuaString):Void;
+	static function lua_pushthread(l:State):Int;
 	static function lua_pushlightuserdata(l:State, v:Dynamic):Void;
 	static function lua_pushcclosure(l:State, v:Function, n:Int):Void;
 	
@@ -73,5 +75,6 @@ extern class Lua {
 	static function lua_toboolean(l:State, i:Int):Bool;
 	static function lua_tostring(l:State, i:Int):LuaString;
 	static function lua_tocfunction(l:State, i:Int):Function;
+	static function lua_tothread(l:State, i:Int):State;
 
 }
