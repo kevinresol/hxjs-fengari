@@ -58,6 +58,7 @@ extern class Lua {
 	static function lua_createtable(l:State, seqSize:Int, otherSize:Int):Void;
 	static function lua_settable(l:State, i:Int):Void;
 	
+	static function lua_pushvalue(l:State, i:Int):Void;
 	static function lua_pushnil(l:State):Void;
 	static function lua_pushnumber(l:State, v:Float):Void;
 	static function lua_pushboolean(l:State, v:Bool):Void;
